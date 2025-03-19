@@ -1,0 +1,27 @@
+name: doom-charm
+base: ubuntu@24.04 # as an alternative, a ubuntu base can be used
+build-base: ubuntu@24.04 # build-base is required when the base is bare
+version: '0.5' # just for humans. Semantic versioning is recommended
+summary: A summary of your Go application # 79 char long summary
+description: |
+    This is doom-charm's description. You have a paragraph or two to tell the
+    most important story about it. Keep it under 100 words though,
+    we live in tweetspace and your description wants to look good in the
+    container registries out there.
+platforms:
+    amd64:
+    # ppc64el:
+    # s390x:
+
+# to ensure the go-framework extension functions properly, your Go project
+# should have a go.mod file. Check the parts section for the selection of
+# the default binary.
+# see https://documentation.ubuntu.com/rockcraft/en/1.9.0/reference/extensions/go-framework
+# for more information.
+# +-- doom_charm
+# |   |-- go.mod
+# |   |-- migrate.sh
+
+extensions:
+    - go-framework
+
